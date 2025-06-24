@@ -1,19 +1,21 @@
 import clsx from 'clsx'
-import { InputHTMLAttributes, PropsWithoutRef, useId } from 'react'
+import { SelectHTMLAttributes, PropsWithoutRef, useId } from 'react'
 
-export type UiTextFieldProps = {
+type
+
+export type UiSelectFieldProps = {
 	className?: string
 	label?: string
 	error?: string
-	inputProps?: PropsWithoutRef<InputHTMLAttributes<HTMLInputElement>>
+	selectProps?: PropsWithoutRef<SelectHTMLAttributes<HTMLSelectElement>>
 }
 
-export function UiTextField({
+export function UiSelectField({
 	className,
 	label,
 	error,
-	inputProps,
-}: UiTextFieldProps) {
+	selectProps,
+}: UiSelectFieldProps) {
 	const id = useId()
 
 	return (
@@ -23,11 +25,11 @@ export function UiTextField({
 					{label}
 				</label>
 			)}
-			<input
-				{...inputProps}
+			<select
+				{...selectProps}
 				id={id}
 				className={clsx(
-					inputProps?.className,
+					selectProps?.className,
 					'rounded border border-slate-300 focus:border-teal-600 px-2 h-10 outline-none'
 				)}
 			/>
