@@ -1,11 +1,11 @@
 import clsx from 'clsx'
-import { InputHTMLAttributes, PropsWithoutRef, useId } from 'react'
+import { InputHTMLAttributes, useId } from 'react'
 
 export type UiTextFieldProps = {
 	className?: string
 	label?: string
 	error?: string
-	inputProps?: PropsWithoutRef<InputHTMLAttributes<HTMLInputElement>>
+	inputProps?: InputHTMLAttributes<HTMLInputElement>
 }
 
 export function UiTextField({

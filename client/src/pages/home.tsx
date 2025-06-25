@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google'
 import { authControllerGetSessionInfo } from '@/shared/api/generated'
 import { UiButton } from '@/shared/ui/ui-button'
 import { UiTextField } from '@/shared/ui/ui-text-field'
+import { UiSelectField } from '@/shared/ui/ui-select-field'
+import { UiLink } from '@/shared/ui/ui-link'
+import { UiSpinner } from '@/shared/ui/ui-spinner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +35,15 @@ export function HomePage() {
 				inputProps={{ placeholder: 'Placeholder' }}
 			/>
 			<UiTextField inputProps={{ placeholder: 'Placeholder' }} />
+
+			<UiSelectField
+				selectProps={{ placeholder: 'Placeholder' }}
+				options={[{ value: '1', label: 'Option 1' }]}
+			/>
+
+			<UiLink href={'/'}>Link</UiLink>
+
+			<UiSpinner className={'text-teal-600 w-9 h-9'} />
 		</main>
 	)
 }
