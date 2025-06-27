@@ -13,7 +13,7 @@ export function ToggleBlockingButton({}) {
 		<UiButton
 			disabled={isLoading}
 			onClick={toggleBlocking}
-			variant={isBlockingEnabled ? 'primary' : 'secondary'}
+			variant={!isBlockingEnabled ? 'primary' : 'secondary'}
 		>
 			{isBlockingEnabled ? 'Disable blocking' : 'Enable blocking'}
 		</UiButton>
