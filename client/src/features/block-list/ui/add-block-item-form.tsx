@@ -10,16 +10,10 @@ const typeOptions = [
 ]
 
 export function AddBlockItemForm() {
-	const { handleSubmit, isLoading, register, type, reset } =
-		useAddBlockItemForm()
-
-	const onSubmit = () => {
-		handleSubmit()
-		// reset()
-	}
+	const { handleSubmit, isLoading, register, type } = useAddBlockItemForm()
 
 	return (
-		<form onSubmit={onSubmit} className='flex gap-2'>
+		<form onSubmit={handleSubmit} className='flex gap-2'>
 			<UiSelectField
 				options={typeOptions}
 				className='grow min-w-[200px]'
