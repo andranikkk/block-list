@@ -12,14 +12,18 @@
     "api:generate": "orval"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-query": "^5.81.5",
+    "clsx": "^2.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11",
     "vite-plugin-chrome-extension": "^0.0.7"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.33",
     "@eslint/js": "^9.29.0",
+    "@types/chrome": "^0.0.329",
     "@types/node": "^24.0.7",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
